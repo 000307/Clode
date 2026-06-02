@@ -1,6 +1,6 @@
-# large/re-fetchable national source files (use scripts/fetch_data.py)
-# everything in data/ except the small Karviná-only geojson subsets
+# large/re-fetchable national source files (use scripts/fetch_data.py).
+# Keep only the small per-city geojson subsets in git.
 data/*
-!data/karvina_okrsky.geojson
-!data/karvina_okrsky_2022.geojson
+!data/*_ps2025.geojson
+!data/*_kv2022.geojson
 __pycache__/

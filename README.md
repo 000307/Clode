@@ -1,70 +1,67 @@
-# Karviná – výsledky voleb podle volebních okrsků
+# Výsledky voleb podle volebních okrsků – Karviná, Havířov, Orlová
 
-Mapy a data výsledků voleb ve městě **Karviná** (obec 598917, okres Karviná)
-po jednotlivých **volebních okrscích** – pro uskupení **SPOLU**, **Piráti**
-a **STAN**, samostatně i dohromady. Sledovaný ukazatel je **počet hlasů**
-i **% platných hlasů**. Pokryté volby:
+Mapy a data výsledků voleb pro uskupení **SPOLU**, **Piráti** a **STAN**
+(samostatně i dohromady) po jednotlivých **volebních okrscích** ve třech
+městech okresu Karviná – **Karviná**, **Havířov** a **Orlová**. Sledovaný
+ukazatel je **počet hlasů** i **% platných hlasů**. Pokryté volby:
 
-- **Poslanecká sněmovna 2025** (PS 2025) – 52 okrsků
-- **Komunální volby 2022** (KV 2022) – 59 okrsků
+- **Poslanecká sněmovna 2025** (PS 2025)
+- **Komunální volby 2022** (KV 2022)
 
-## Poslanecká sněmovna 2025 – celé město (52 okrsků, 23 027 platných hlasů)
+Pro každé město a volby vznikne choropletová mapa, kde je **každý okrsek tím
+tmavší, čím více hlasů uskupení získalo**, s popiskem *číslo / počet hlasů /
+% platných hlasů* a výřezem hustého centra.
 
-| Uskupení | Hlasy | % platných |
-|---|---:|---:|
-| SPOLU (ODS, KDU-ČSL, TOP 09) | 2 073 | 9,00 % |
-| Piráti (Česká pirátská strana) | 1 049 | 4,56 % |
-| STAN (Starostové a nezávislí) | 1 239 | 5,38 % |
-| **DOHROMADY** | **4 361** | **18,94 %** |
+## Poslanecká sněmovna 2025 (% z platných hlasů)
 
-Tabulka po okrscích: [`output/karvina_okrsky_vysledky.csv`](output/karvina_okrsky_vysledky.csv).
-Mapy: `output/karvina_mapa_*.png`.
+| Město | Okrsků | SPOLU | Piráti | STAN | Dohromady |
+|---|--:|--:|--:|--:|--:|
+| Karviná | 52 | 2 073 (9,00 %) | 1 049 (4,56 %) | 1 239 (5,38 %) | 4 361 (18,94 %) |
+| Havířov | 62 | 4 618 (13,85 %) | 2 077 (6,23 %) | 2 048 (6,14 %) | 8 743 (26,22 %) |
+| Orlová | 30 | 1 197 (9,00 %) | 659 (4,95 %) | 610 (4,59 %) | 2 466 (18,54 %) |
 
-## Komunální volby 2022 – celé město (59 okrsků, 544 182 platných hlasů)
+## Komunální volby 2022 (% = oficiální „přepočtený základ“ ČSÚ)
 
-Zastupitelstvo města má 41 členů; **% je oficiální „přepočtený základ“** ČSÚ
-(podíl hlasů strany na základu zohledňujícím počet kandidátů strany), proto
-se Piráti (39 kandidátů místo 41) liší od prostého podílu.
+| Město | Okrsků | SPOLU | Piráti | STAN | Dohromady |
+|---|--:|--:|--:|--:|--:|
+| Karviná | 59 | 32 097 (5,90 %) | 17 432 (3,36 %) | 8 985 (1,65 %) | 58 514 (10,9 %) |
+| Havířov | 79 | 103 177 (13,05 %) \* | 36 009 (4,56 %) | — \* | 139 186 (17,61 %) |
+| Orlová | 30 | 10 948 (5,18 %) | 6 632 (3,36 %) | — \*\* | 17 580 (8,54 %) |
 
-| Uskupení | Hlasy | % platných |
-|---|---:|---:|
-| SPOLU (KDU-ČSL, ODS, TOP 09) | 32 097 | 5,89 % |
-| Piráti (Česká pirátská strana) | 17 432 | 3,36 % |
-| STAN (Starostové a nezávislí) | 8 985 | 1,65 % |
-| **DOHROMADY** | **58 514** | **10,9 %** |
+\* **Havířov:** STAN neměl vlastní kandidátku – kandidoval v rámci koalice
+**„SPOLU plus" (ODS, KDU-ČSL, TOP 09, STAN)**, takže ho nelze vyčíslit
+samostatně; číslo u „SPOLU" je celá tato koalice.
+\*\* **Orlová:** STAN v komunálních volbách 2022 vůbec nekandidoval.
 
-> Pozn.: komunální volby používají *panachage* – volič má až tolik hlasů, kolik
-> se volí zastupitelů (41). „Počet hlasů“ strany je součet hlasů jejích
-> kandidátů.
+> **Pozor na srovnatelnost:** komunální volby používají *panachage* – volič má
+> až tolik hlasů, kolik se volí zastupitelů (Karviná 41, Havířov 43, Orlová
+> 31). „Počet hlasů" kandidátky je proto součet hlasů jejích kandidátů a je
+> řádově vyšší než u sněmovních voleb. Procenta v komunálu jsou počítána
+> oficiálním přepočteným základem (zohledňuje počet platných kandidátů
+> kandidátky), takže odpovídají číslům na volby.cz.
 
-Tabulka po okrscích: [`output/karvina_2022_okrsky_vysledky.csv`](output/karvina_2022_okrsky_vysledky.csv).
-Mapy: `output/karvina_2022_mapa_*.png`.
+## Struktura výstupů (`output/<město>/`)
 
-## Grafika (`output/`)
+Pro každé město (`karvina`, `havirov`, `orlova`) a každé volby
+(`ps2025`, `kv2022`):
 
-Choropletová mapa města podle volebních okrsků – **každý okrsek je tím tmavší,
-čím více hlasů uskupení získalo**. Každý okrsek je popsán *číslem / počtem
-hlasů / % platných hlasů*. Protože je v centru města mnoho malých okrsků, má
-každá podrobná mapa vpravo **výřez centra**.
-
-| Soubor (prefix `karvina_` / `karvina_2022_`) | Obsah |
+| Soubor | Obsah |
 |---|---|
-| `…mapa_DOHROMADY.png` | SPOLU + Piráti + STAN dohromady |
-| `…mapa_SPOLU.png` | SPOLU |
-| `…mapa_Pirati.png` | Piráti |
-| `…mapa_STAN.png` | STAN |
-| `…mapa_prehled_procenta.png` | přehled 2×2 (barva = % platných hlasů) |
+| `<m>_<v>_okrsky.csv` | tabulka po okrscích (hlasy i % pro všechna uskupení) |
+| `<m>_<v>_mapa_DOHROMADY.png` | mapa: uskupení dohromady (město + detail centra) |
+| `<m>_<v>_mapa_SPOLU.png` | mapa: SPOLU |
+| `<m>_<v>_mapa_Pirati.png` | mapa: Piráti |
+| `<m>_<v>_mapa_STAN.png` | mapa: STAN (jen tam, kde STAN kandidoval samostatně) |
+| `<m>_<v>_prehled.png` | přehledové srovnání všech uskupení (barva = % hlasů) |
 
 ## Zdroje dat (otevřená data, CC-BY 4.0)
 
-- **PS 2025 – výsledky po okrscích** – ČSÚ / volby.cz (`pst4` = úhrny za okrsek,
-  `pst4p` = hlasy stran za okrsek, `psrkl` = číselník volebních stran).
-  <https://www.volby.cz/opendata/ps2025/ps2025_opendata.htm>
-  Čísla stran (KSTRANA): **11 = SPOLU, 16 = Piráti, 23 = STAN**.
-- **KV 2022 – výsledky po okrscích** – ČSÚ / volby.cz (`kvt3` = úhrny za okrsek,
-  `kvhl` = hlasy stran za okrsek, `kvros` = registrované kandidátky,
-  `kvrk` = kandidáti). <https://www.volby.cz/opendata/kv2022/kv2022_opendata.htm>
-  Čísla kandidátek v Karviné: **6 = SPOLU, 2 = Piráti, 7 = STAN**.
+- **PS 2025 – výsledky po okrscích** – ČSÚ / volby.cz (`pst4`, `pst4p`,
+  `psrkl`). <https://www.volby.cz/opendata/ps2025/ps2025_opendata.htm>
+  Národní čísla stran (KSTRANA): **11 = SPOLU, 16 = Piráti, 23 = STAN**.
+- **KV 2022 – výsledky po okrscích** – ČSÚ / volby.cz (`kvt3`, `kvhl`,
+  `kvros`, `kvrk`). <https://www.volby.cz/opendata/kv2022/kv2022_opendata.htm>
+  Čísla kandidátek jsou lokální – viz `scripts/cities.py`.
 - **Hranice volebních okrsků** – ČSÚ, *„Volební okrsky pro volby do PS 2025 –
   generalizované“* a *„Volební okrsky 2022“* (geodata.csu.gov.cz / volby.cz,
   generalizováno z RÚIAN/ČÚZK).
@@ -73,13 +70,14 @@ každá podrobná mapa vpravo **výřez centra**.
 
 ```bash
 pip install pandas geopandas matplotlib shapely
-python3 scripts/fetch_data.py         # stáhne zdrojová data do data/
-python3 scripts/build_data.py         # PS 2025 -> output/karvina_okrsky_vysledky.csv
-python3 scripts/build_data_2022.py    # KV 2022 -> output/karvina_2022_okrsky_vysledky.csv
-python3 scripts/build_maps.py         # PS 2025 -> output/karvina_mapa_*.png
-python3 scripts/build_maps_2022.py    # KV 2022 -> output/karvina_2022_mapa_*.png
+cd scripts
+python3 fetch_data.py     # stáhne zdrojová data + výřezy geometrie do data/
+python3 build_data.py     # -> output/<město>/<…>_okrsky.csv
+python3 build_maps.py     # -> output/<město>/<…>.png
 ```
 
-Velké národní soubory se do gitu neukládají (jsou znovu stažitelné přes
-`fetch_data.py`); v repozitáři je jen karvinská geometrie
-(`data/karvina_okrsky*.geojson`) a odvozené výstupy.
+Konfigurace měst (kódy obcí, čísla komunálních kandidátek, poznámky) je
+v [`scripts/cities.py`](scripts/cities.py). Velké národní soubory se do gitu
+neukládají (znovu stažitelné přes `fetch_data.py`); v repu jsou jen malé
+karvinská/havířovská/orlovská geometrie `data/<město>_<volby>.geojson`
+a odvozené výstupy.
