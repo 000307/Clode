@@ -88,8 +88,11 @@ def build_ps2025(slug, city):
 # ---------------------------------------------------------------------------
 def build_kv2022(slug, city):
     obec = city["code"]
-    mapping = city["kv2022"]                 # group -> POR_STR_HL
-    groups = [g for g in ("SPOLU", "Pirati", "STAN") if g in mapping]
+    mapping = city["kv2022"]                 # group -> POR_STR_HL (or None)
+    if not mapping:
+        print(f"[KV2022] {city['name']:9s} přeskočeno – {city['kv2022_note']}")
+        return []
+    groups = list(mapping.keys())
     por_of = mapping
     want_por = set(mapping.values())
 

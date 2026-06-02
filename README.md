@@ -1,8 +1,8 @@
 # Výsledky voleb podle volebních okrsků – Karviná, Havířov, Orlová
 
 Mapy a data výsledků voleb pro uskupení **SPOLU**, **Piráti** a **STAN**
-(samostatně i dohromady) po jednotlivých **volebních okrscích** ve třech
-městech okresu Karviná – **Karviná**, **Havířov** a **Orlová**. Sledovaný
+(samostatně i dohromady) po jednotlivých **volebních okrscích** v obcích
+**Karviná**, **Havířov**, **Orlová**, **Nový Jičín** a **Sedlnice**. Sledovaný
 ukazatel je **počet hlasů** i **% platných hlasů**. Pokryté volby:
 
 - **Poslanecká sněmovna 2025** (PS 2025)
@@ -19,6 +19,8 @@ tmavší, čím více hlasů uskupení získalo**, s popiskem *číslo / počet 
 | Karviná | 52 | 2 073 (9,00 %) | 1 049 (4,56 %) | 1 239 (5,38 %) | 4 361 (18,94 %) |
 | Havířov | 62 | 4 618 (13,85 %) | 2 077 (6,23 %) | 2 048 (6,14 %) | 8 743 (26,22 %) |
 | Orlová | 30 | 1 197 (9,00 %) | 659 (4,95 %) | 610 (4,59 %) | 2 466 (18,54 %) |
+| Nový Jičín | 22 | 2 251 (19,59 %) | 1 056 (9,19 %) | 923 (8,03 %) | 4 230 (36,81 %) |
+| Sedlnice | 1 | 174 (18,32 %) | 77 (8,11 %) | 100 (10,53 %) | 351 (36,95 %) |
 
 ## Komunální volby 2022 (% = oficiální „přepočtený základ“ ČSÚ)
 
@@ -33,9 +35,31 @@ tmavší, čím více hlasů uskupení získalo**, s popiskem *číslo / počet 
 samostatně; číslo u „SPOLU" je celá tato koalice.
 \*\* **Orlová:** STAN v komunálních volbách 2022 vůbec nekandidoval.
 
+### Nový Jičín – komunální volby 2022 (zvláštní případ)
+
+SPOLU/Piráti/STAN tu **nekandidovaly jako samostatné kandidátky**, proto se
+mapují **reálné kandidátky, které skutečně běžely** (% = přepočtený základ,
+22 okrsků):
+
+| Kandidátka | Hlasy | % platných |
+|---|--:|--:|
+| Koalice Zelení + Piráti + TOP 09 + STAN (č.1) | 31 776 | 16,25 % |
+| ODS (č.4) | 21 720 | 11,11 % |
+| KDU-ČSL (č.5) | 13 944 | 7,13 % |
+| Dohromady (uvedené tři) | 67 440 | 34,5 % |
+
+Piráti a STAN tu byli v jedné koalici (se Zelenými a TOP 09); ze „SPOLU“ šly
+ODS a KDU-ČSL samostatně a TOP 09 byla v koalici č.1.
+
+### Sedlnice – komunální volby 2022
+
+Mapa se **nedělá** – kandidovaly jen ANO, sdružení „PRO SEDLNICE SPOLEČNĚ“
+a Moravané, žádné ze SPOLU/Piráti/STAN. (Sněmovní volby 2025 jsou k dispozici,
+obec má ovšem jen 1 okrsek, takže „mapa“ je jediný polygon.)
+
 > **Pozor na srovnatelnost:** komunální volby používají *panachage* – volič má
 > až tolik hlasů, kolik se volí zastupitelů (Karviná 41, Havířov 43, Orlová
-> 31). „Počet hlasů" kandidátky je proto součet hlasů jejích kandidátů a je
+> 31, Nový Jičín 29). „Počet hlasů" kandidátky je proto součet hlasů jejích kandidátů a je
 > řádově vyšší než u sněmovních voleb. Procenta v komunálu jsou počítána
 > oficiálním přepočteným základem (zohledňuje počet platných kandidátů
 > kandidátky), takže odpovídají číslům na volby.cz.
@@ -79,5 +103,4 @@ python3 build_maps.py     # -> output/<město>/<…>.png
 Konfigurace měst (kódy obcí, čísla komunálních kandidátek, poznámky) je
 v [`scripts/cities.py`](scripts/cities.py). Velké národní soubory se do gitu
 neukládají (znovu stažitelné přes `fetch_data.py`); v repu jsou jen malé
-karvinská/havířovská/orlovská geometrie `data/<město>_<volby>.geojson`
-a odvozené výstupy.
+per-obecní geometrie `data/<město>_<volby>.geojson` a odvozené výstupy.
