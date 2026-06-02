@@ -1,0 +1,10 @@
+# large/re-fetchable national source files (use scripts/fetch_data.py)
+data/pst4.csv
+data/pst4p.csv
+data/psrkl.csv
+data/cisob.csv
+data/cns.csv
+data/cvs.csv
+data/psrk.csv
+data/svc.json
+__pycache__/
